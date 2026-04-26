@@ -1,0 +1,8 @@
+[package]
+name = "tokio"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+beakid = { path = "../.." }
+tokio-runtime = { package = "tokio", version = "1", features = ["rt-multi-thread", "time"] }

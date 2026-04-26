@@ -1,0 +1,8 @@
+[package]
+name = "smol-bench"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+beakid = { path = "../.." }
+smol = "2"

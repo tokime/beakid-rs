@@ -1,0 +1,15 @@
+[package]
+name = "beakid"
+version = "0.1.0"
+edition = "2024"
+description = "Lock-free unique ID generator inspired by Twitter Snowflake"
+license = "MIT"
+repository = "https://github.com/tokime/beakid-rs"
+homepage = "https://github.com/tokime/beakid-rs"
+documentation = "https://docs.rs/beakid"
+readme = "README.md"
+keywords = ["id", "snowflake", "uuid", "generator", "lock-free"]
+categories = ["data-structures", "concurrency", "asynchronous"]
+rust-version = "1.85"
+
+[dependencies]
