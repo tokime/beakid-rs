@@ -14,11 +14,11 @@ fn main() {
     println!("{}", "-".repeat(81));
 
     bench_run(1, 100_000);
-    bench_run(2, 2_000_000);
-    bench_run(4, 100_000);
-    bench_run(8, 100_000);
-    bench_run(28, 100_600_000);
-    bench_run(56, 5_600_000);
+    bench_run(2, 200_000);
+    bench_run(4, 400_000);
+    bench_run(8, 1_000_000);
+    bench_run(28, 28_000_000);
+    bench_run(56, 56_000_000);
 }
 
 fn bench_run(tasks: usize, total_ids: u64) {
