@@ -2,7 +2,7 @@ use crate::{BeakId, Error, states};
 use std::sync::atomic::Ordering;
 use std::{sync::atomic::AtomicU64, time::SystemTime};
 
-const TIMESTAMP_SHIFT: u8 = 29;
+pub(crate) const TIMESTAMP_SHIFT: u8 = 29;
 const TIMESTAMP_MASK: u64 = !((1 << TIMESTAMP_SHIFT) - 1);
 const WORKER_ID_SHIFT: u8 = 10;
 const WORKER_ID_MASK: u64 = (1 << WORKER_ID_SHIFT) - 1;
@@ -376,5 +376,17 @@ impl Generator {
         }
 
         self.state.store(0, Ordering::Release);
+    }
+
+    /// En: Returns created_at from BeakId
+    ///
+    /// Ru: Возвращает created_at из BeakId
+    pub fn get_created_at(&self, id: &BeakId) -> u64 {
+        id.timestamp()
+            + self
+                .epoch
+                .duration_since(SystemTime::UNIX_EPOCH)
+                .expect("epoch before unix epoch")
+                .as_millis() as u64
     }
 }

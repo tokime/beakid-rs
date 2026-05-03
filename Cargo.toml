@@ -1,6 +1,6 @@
 [package]
 name = "beakid"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 description = "Lock-free unique ID generator inspired by Twitter Snowflake"
 license = "MIT"
