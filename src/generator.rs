@@ -381,7 +381,7 @@ impl Generator {
     /// En: Returns created_at from BeakId
     ///
     /// Ru: Возвращает created_at из BeakId
-    pub fn get_created_at(&self, id: &BeakId) -> u64 {
+    pub fn get_created_at(&self, id: BeakId) -> u64 {
         id.timestamp()
             + self
                 .epoch
