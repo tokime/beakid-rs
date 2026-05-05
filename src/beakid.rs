@@ -116,4 +116,11 @@ impl BeakId {
     pub fn timestamp(&self) -> u64 {
         (self.0 >> generator::TIMESTAMP_SHIFT) * 100
     }
+
+    /// En: Returns id as i64 for PostgreSQL BIGINT
+    ///
+    /// Ru: Возвращает id в формате i64 для PostgreSQL BIGINT
+    pub fn i64(&self) -> i64 {
+        self.0 as i64
+    }
 }
